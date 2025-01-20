@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packs Starter - Portfolio Interactif</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+        }
+
+        .hero-section-packs {
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-section-packs h1, .hero-section-packs p {
+            color: #007bff;
+        }
+
+        .packs-section {
+            padding: 50px 0;
+        }
+
+        .pack-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .pack-card h3 {
+            color: #007bff;
+        }
+
+        .pack-card p {
+            color: #6c757d;
+        }
+
+        .pack-card .price {
+            font-size: 1.5rem;
+            color: black;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .btn-pack {
+            background-color: black;
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-pack:hover {
+            background-color: #007bff;
+        }
+
+        footer {
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+        }
+
+        footer p {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Webpro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galery.html">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="packs.html">Packs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section-packs">
+        <div class="container">
+            <h1>Packs Starter</h1>
+            <p>Des solutions adaptées à vos besoins, de 500$ à 900$.</p>
+        </div>
+    </header>
+
+    <!-- Packs Section -->
+    <section class="packs-section">
+        <div class="container">
+            <div class="row">
+                <!-- Pack 1 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pack-card">
+                        <h3>Pack Essentiel</h3>
+                        <p>Parfait pour les petites entreprises et freelances.</p>
+                        <p class="price">500$</p>
+                        <ul class="list-unstyled">
+                            <li>1 page web moderne</li>
+                            <li>Design responsive</li>
+                            <li>Intégration des réseaux sociaux</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-pack mt-3">Contactez-nous</a>
+                    </div>
+                </div>
+                <!-- Pack 2 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pack-card">
+                        <h3>Pack Avancé</h3>
+                        <p>Idéal pour les entreprises en croissance.</p>
+                        <p class="price">700$</p>
+                        <ul class="list-unstyled">
+                            <li>3 pages web</li>
+                            <li>Formulaire de contact</li>
+                            <li>SEO de base inclus</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-pack mt-3">Contactez-nous</a>
+                    </div>
+                </div>
+                <!-- Pack 3 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pack-card">
+                        <h3>Pack Premium</h3>
+                        <p>Pour une présence en ligne complète et professionnelle.</p>
+                        <p class="price">900$</p>
+                        <ul class="list-unstyled">
+                            <li>5 pages web personnalisées</li>
+                            <li>Design interactif et animations</li>
+                            <li>Optimisation SEO avancée</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-pack mt-3">Contactez-nous</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-white py-3">
+        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init(); // Initialisation des animations
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Yvan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Corps de la page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffffff, #f2f2f2);
+            overflow: hidden;
+        }
+
+        /* Section Hero */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Ordinateur animé */
+        .laptop {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            perspective: 1000px; /* Permet un effet 3D */
+        }
+
+        .laptop-screen, .laptop-base {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: black;
+            border-radius: 10px;
+        }
+
+        /* Écran */
+        .laptop-screen {
+            width: 280px;
+            height: 160px;
+            background: #222;
+            transform-origin: bottom center;
+            transform: rotateX(-90deg); /* État fermé */
+            animation: openClose 4s infinite ease-in-out; /* Animation */
+        }
+
+        /* Contenu de l'écran */
+        .laptop-screen::before {
+            content: '';
+            display: block;
+            background: linear-gradient(to bottom, #4caf50, #81c784);
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        /* Base */
+        .laptop-base {
+            width: 300px;
+            height: 20px;
+            background: #444;
+            top: 180px;
+        }
+
+        /* Animation ouverture/fermeture */
+        @keyframes openClose {
+            0%, 100% {
+                transform: rotateX(-90deg); /* Fermé */
+            }
+            50% {
+                transform: rotateX(0deg); /* Ouvert */
+            }
+        }
+
+        /* Texte de présentation */
+        .hero-text {
+            position: absolute;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: bold;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Animation texte */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Section Hero -->
+    <section class="hero-section">
+        <!-- Ordinateur animé -->
+        <div class="laptop">
+            <div class="laptop-screen"></div>
+            <div class="laptop-base"></div>
+        </div>
+        <!-- Texte superposé -->
+        <div class="hero-text">
+            <h2>Bienvenue sur Websyto</h2>
+            <p>Transformez vos idées en réalité avec des solutions web sur mesure.</p>
+        </div>
+    </section>
+</body>
+</html>

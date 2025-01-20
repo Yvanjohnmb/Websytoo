@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Délice</title>
+    <style>
+        /* Couleurs et police globale */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Header Parallax */
+        .header {
+            position: relative;
+            height: 100vh;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+        }
+        .header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        .header img {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            max-height: 100vh; /* Évite les débordements */
+            object-fit: cover;
+            animation: fadeInOut 5s infinite alternate;
+        }
+        .title {
+            font-size: 3em;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .subtitle {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        /* Boutons */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1em;
+            color: #fff;
+            background: linear-gradient(45deg, #444, #666);
+            text-decoration: none;
+            border-radius: 30px;
+            transition: transform 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            background: linear-gradient(45deg, #666, #444);
+        }
+
+        /* Section Menu */
+        .menu-section {
+            padding: 50px 20px;
+            text-align: center;
+            background: rgba(50, 50, 50, 0.9);
+        }
+        .menu-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+        }
+        .menu-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Section Réservation */
+        .reservation-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .reservation-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .reservation-form input, .reservation-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .reservation-form button {
+            background: linear-gradient(45deg, #444, #666);
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .reservation-form button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .menu-items {
+                grid-template-columns: repeat(1, 1fr); /* Un seul élément par ligne */
+            }
+
+            .header {
+                height: 70vh; /* Réduction de la hauteur pour petits écrans */
+                background-size: cover;
+            }
+
+            .title {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+            }
+
+            .menu-item img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .btn {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Section Header avec Parallax -->
+    <header class="header">
+        <img src="https://media.giphy.com/media/26xBwdIuRJiAIqHwA/giphy.gif" alt="Image animée">
+        <div class="header-content">
+            <h1 class="title">Bienvenue chez JOHN YVAN</h1>
+            <p class="subtitle">Une expérience culinaire inoubliable</p>
+            <a href="#menu" class="btn">Voir le menu</a>
+        </div>
+    </header>
+
+    <!-- Section Menu -->
+    <section id="menu" class="menu-section">
+        <h2>Notre Menu</h2>
+        <div class="menu-items">
+            <!-- 9 Cadres pour les menus -->
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/100" alt="Image Plat Gourmet" title="Plat Gourmet">
+                <h3>Plat Gourmet</h3>
+                <p>Description du plat.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/100" alt="Image Délice du Chef" title="Délice du Chef">
+                <h3>Délice du Chef</h3>
+                <p>Description du plat.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/100" alt="Image Dessert Parfait" title="Dessert Parfait">
+                <h3>Dessert Parfait</h3>
+                <p>Description du plat.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/100" alt="Image Entrée Spéciale" title="Entrée Spéciale">
+                <h3>Entrée Spéciale</h3>
+                <p>Description du plat.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/100" alt="Image Plat Signature" title="Plat Signature">
+                <h3>Plat Signature</h3>
+                <p>Description du plat.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/100" alt="Image Soupes et Salades" title="Soupes et Salades">
+                <h3>Soupes et Salades</h3>
+                <p>Description du plat.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/100" alt="Image Pizza Maison" title="Pizza Maison">
+                <h3>Pizza Maison</h3>
+                <p>Description du plat.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/100" alt="Image Sandwich Royal" title="Sandwich Royal">
+                <h3>Sandwich Royal</h3>
+                <p>Description du plat.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/100" alt="Image Boissons Fraîches" title="Boissons Fraîches">
+                <h3>Boissons Fraîches</h3>
+                <p>Description du plat.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Réservation -->
+    <section class="reservation-section">
+        <h2>Réservez votre table</h2>
+        <form class="reservation-form">
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <input type="date" required>
+            <button type="submit" class="btn">Réserver</button>
+        </
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Restaurant Délice - Tous droits réservés</p>
+        <p>Créé avec passion par <strong>John Yvan</strong></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Yvan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Dégradé de fond blanc */
+        body {
+            background: linear-gradient(to right, #ffffff, #f2f2f2);
+            color: #333;
+        }
+
+        /* Style pour les boutons */
+        .btn-custom {
+            background-color: black;
+            color: blue;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        /* Menu */
+        #menu {
+            background-color: #f2f2f2; /* Fond gris clair */
+            border: 1px solid #ddd; /* Bordures claires */
+        }
+
+        #menu a {
+            color: #333;
+        }
+
+        #menu a:hover {
+            background-color: #ddd; /* Fond lors du survol */
+        }
+
+        /* Header Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* Vidéo en arrière-plan */
+        .hero-section video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Texte sur la vidéo */
+        .hero-text {
+            z-index: 1;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="fixed top-0 left-0 w-full p-4 bg-white shadow-md flex justify-between items-center z-50">
+        <span class="text-black font-bold text-lg">Websyto</span>
+        <button id="menu-toggle" class="text-2xl font-bold">
+            ☰
+        </button>
+    </div>
+
+    <!-- Menu déroulant -->
+    <nav id="menu" class="fixed top-14 left-4 w-48 hidden p-4 rounded-lg z-50 shadow-md">
+        <ul>
+            <li><a href="about.html" class="block py-2 px-4 rounded">À propos</a></li>
+            <li><a href="services.html" class="block py-2 px-4 rounded">Services</a></li>
+            <li><a href="projects.html" class="block py-2 px-4 rounded">Projets</a></li>
+            <li><a href="contact.html" class="block py-2 px-4 rounded">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+
+        menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+    <!-- Section Hero avec vidéo en arrière-plan -->
+    <section class="hero-section">
+        <video autoplay loop muted>
+            <source src="1.mp4" type="video/mp4">
+            Votre navigateur ne prend pas en charge la balise vidéo.
+        </video>
+        <div class="hero-text">
+            <h2 class="text-4xl font-bold">Bienvenue sur Websyto</h2>
+            <p class="mt-4 text-lg">Transformez vos idées en réalité avec des solutions web sur mesure.</p>
+        </div>
+    </section>
+
+    <!-- Bouton Voir Nos Projets -->
+    <section class="py-16 text-center">
+        <a href="projects.html" class="btn-custom py-4 px-8 rounded-lg text-white font-bold transition-all duration-300 ease-in-out">Voir nos projets</a>
+    </section>
+
+    <!-- Styles CSS -->
+    <style>
+        .btn-custom {
+            background-color: #1d4ed8; /* Bleu */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .btn-custom:hover {
+            background-color: #2563eb; /* Bleu plus clair */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px); /* Légère élévation au survol */
+        }
+
+        .btn-custom:active {
+            background-color: #1e3a8a; /* Bleu plus foncé */
+            transform: translateY(2px); /* Effet d'appui */
+        }
+    </style>
+</body>
+</htmlclass
+
+
+<!-- Section À propos -->
+<section id="about" class="py-16 bg-white">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-extrabold text-gray-800 mb-6">À propos de l'entreprise</h2>
+        <p class="text-lg text-gray-600 mb-10">
+            Nous sommes une agence de création de sites web et de solutions numériques innovantes, dédiée à fournir des résultats exceptionnels pour nos clients. Notre mission est de transformer vos idées en expériences digitales mémorables, en alliant design moderne et technologie de pointe.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Notre Vision</h3>
+                <p class="text-gray-600">
+                    Nous croyons fermement que chaque entreprise mérite un site web qui reflète son identité unique. Notre vision est de rendre l'innovation accessible à tous, en créant des solutions sur mesure qui favorisent la croissance et l'engagement client.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Nos Services</h3>
+                <p class="text-gray-600">
+                    En tant qu'agence de création web, nous offrons une gamme complète de services, allant de la conception de sites web responsives à l'intégration de solutions e-commerce et SaaS. Chaque projet est abordé avec une attention particulière aux détails, à la performance et à l'expérience utilisateur.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="about" class="py-16 bg-gradient-to-r from-white via-gray-100 to-white">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-black text-center mb-6">À propos de Yvan</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <!-- Image de Yvan -->
+            <div class="flex justify-center">
+                <img src="yvan.jpg" alt="Yvan, créateur web et développeur" 
+                     class="w-40 h-40 rounded-full shadow-lg border-4 border-gray-600">
+            </div>
+
+<!-- Texte sur Yvan -->
+            <div>
+                <h3 class="text-xl font-semibold text-black mb-4 text-center lg:text-left">Yvan, créateur et développeur web</h3>
+                <p class="text-lg text-gray-600 mb-4">
+                    Je suis <span class="text-black font-semibold">Yvan</span>, créateur de sites web et développeur passionné. 
+                    Avec plus de <span class="text-black font-semibold">5 ans d'expérience</span>, 
+                    je me spécialise dans la création de sites modernes et optimisés.
+                </p>
+                <p class="text-lg text-gray-600 mb-4">
+                    Mon objectif est de fournir des projets numériques qui répondent aux besoins spécifiques de mes clients 
+                    tout en améliorant leur visibilité en ligne grâce à des techniques avancées de SEO.
+                </p>
+                <p class="text-lg text-gray-600">
+                    Je collabore étroitement avec mes clients pour garantir i résultats qui dépassent leurs attentes, 
+                    en respectant chaque détail de leurs objectifs commerciaux.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="py-16 bg-gradient-to-r from-white via-gray-100 to-white">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-black text-center mb-6">Pourquoi Choisir Websyto ?</h2>
+        <p class="text-lg text-gray-600 text-center mb-12">
+            Avec plus de <span class="text-black font-semibold">5 ans d'expérience</span>, 
+            <span class="text-black font-semibold">WebPro</span> offre des services sur mesure pour créer des sites performants et optimisés pour le SEO.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-black mb-4">Expertise et Savoir-faire</h3>
+                <p class="text-gray-600">
+                    Plusieurs années d'expérience dans la création de sites web modernes et adaptés aux besoins spécifiques de chaque client.
+                </p>
+            </div>
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-black mb-4">Design Responsive</h3>
+                <p class="text-gray-600">
+                    Un design moderne, optimisé pour tous les appareils, offrant une expérience utilisateur fluide et agréable.
+                </p>
+            </div>
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-black mb-4">Optimisation SEO</h3>
+                <p class="text-gray-600">
+                    Sites conçus pour booster votre visibilité en ligne et attirer plus de trafic grâce à des techniques SEO avancées.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+<!-- Section Nos Services -->
+<section id="service" class="py-16 bg-gradient-to-r from-white via-gray-100 to-gray-200">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-8">Nos Services</h2>
+        <p class="text-lg text-gray-500 mb-12">Découvrez nos services professionnels, conçus pour répondre à tous vos besoins numériques et propulser votre présence en ligne.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service Cards -->
+            <div class="service-card p-8 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">Développement Web</h3>
+                <p class="text-gray-500 text-base">Création de sites web modernes et performants, adaptés à vos besoins spécifiques et conçus pour offrir une expérience utilisateur optimale.</p>
+            </div>
+            <div class="service-card p-8 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">SEO et Marketing Digital</h3>
+                <p class="text-gray-500 text-base">Optimisez votre présence en ligne avec des stratégies de référencement efficaces et une approche marketing adaptée pour améliorer votre visibilité.</p>
+            </div>
+            <div class="service-card p-8 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">Design UX/UI</h3>
+                <p class="text-gray-500 text-base">Création de designs intuitifs et esthétiques pour maximiser l'engagement et la satisfaction des utilisateurs sur toutes les plateformes.</p>
+            </div>
+            <div class="service-card p-8 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">Maintenance Web</h3>
+                <p class="text-gray-500 text-base">Offre de services de maintenance pour assurer la mise à jour et la sécurité continues de vos sites web, garantissant ainsi leur performance optimale.</p>
+            </div>
+            <div class="service-card p-8 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">Développement E-commerce</h3>
+                <p class="text-gray-500 text-base">Création de plateformes e-commerce sécurisées et performantes pour vous aider à vendre vos produits en ligne de manière simple et efficace.</p>
+            </div>
+            <div class="service-card p-8 bg-white shadow-lg rounded-lg transition-transform transform hover:scale-105">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">Création de Contenu</h3>
+                <p class="text-gray-500 text-base">Production de contenu créatif et engageant pour renforcer votre image de marque et attirer un public ciblé via des canaux numériques.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="languages" class="py-16 bg-gray-50">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-black mb-10">Création de Sites Web Multilingues</h2>
+        <p class="text-lg text-gray-600 mb-8">
+            Chez <span class="font-semibold text-black">WebPro</span>, nous développons des sites web en <span class="font-semibold text-black">anglais</span> et en <span class="font-semibold text-black">français</span>, en adaptant les contenus pour répondre aux attentes culturelles et linguistiques de vos audiences.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Section en Français -->
+            <div class="p-6 bg-white rounded-lg shadow-lg border">
+                <h3 class="font-bold text-lg text-black mb-4">Sites Web en Français</h3>
+                <p class="text-sm text-gray-600">
+                    Nous créons des contenus clairs, formels et adaptés au public francophone. Par exemple :
+                </p>
+                <ul class="list-disc list-inside text-sm text-gray-600 mt-4">
+                    <li>Utilisation de termes spécifiques à la culture locale (ex. : "Actualités" au lieu de "Nouvelles").</li>
+                    <li>Formats de dates et numéros adaptés (ex. : 12 janvier 2025).</li>
+                    <li>Styles d'écriture professionnels, respectant les conventions linguistiques françaises.</li>
+                </ul>
+            </div>
+            <!-- Section en Anglais -->
+            <div class="p-6 bg-white rounded-lg shadow-lg border">
+                <h3 class="font-bold text-lg text-black mb-4">English Websites</h3>
+                <p class="text-sm text-gray-600">
+                    We craft content tailored for an English-speaking audience. Examples include:
+                </p>
+                <ul class="list-disc list-inside text-sm text-gray-600 mt-4">
+                    <li>Using global terms and expressions (e.g., "News" instead of "Actualités").</li>
+                    <li>Adapting date and number formats (e.g., January 12, 2025).</li>
+                    <li>Casual or formal tone depending on your target audience.</li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-lg text-gray-600 mt-8">
+            Nous nous assurons que chaque langue soit optimisée pour les moteurs de recherche (SEO) et qu’elle reflète parfaitement l’identité de votre marque dans chaque région.
+        </p>
+    </div>
+</section>
+
+
+<!-- Section Nos Projets -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Nos Projets</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="project-card p-6 bg-white shadow-lg rounded-lg">
+                    <img src="t1.jpeg" alt="Projet 1" class="w-full mb-4 rounded-lg">
+                    <h3 class="font-bold text-lg mb-2">Projet 1</h3>
+                    <p class="text-sm text-gray-400">Description rapide du projet 1.</p>
+                    <a href="po.html" class="inline-block mt-4 text-blue-400 hover:text-blue-300">Voir la démo</a>
+                </div>
+                <div class="project-card p-6 bg-white shadow-lg rounded-lg">
+                    <img src="t2.jpeg" alt="Projet 2" class="w-full mb-4 rounded-lg">
+                    <h3 class="font-bold text-lg mb-2">Projet 2</h3>
+                    <p class="text-sm text-gray-400">Description rapide du projet 2.</p>
+                    <a href="de.html" class="inline-block mt-4 text-blue-400 hover:text-blue-300">Voir la démo</a>
+                </div>
+                <div class="project-card p-6 bg-white shadow-lg rounded-lg">
+                    <img src="t3.jpeg" alt="Projet 3" class="w-full mb-4 rounded-lg">
+                    <h3 class="font-bold text-lg mb-2">Projet 3</h3>
+                    <p class="text-sm text-gray-400">Description rapide du projet 3.</p>
+                    <a href="re.html" class="inline-block mt-4 text-blue-400 hover:text-blue-300">Voir la démo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+<!-- Suivi en Temps Réel -->
+<section id="real-time-counter">
+    <div class="container text-center">
+        <h2>Projets réalisés en temps réel</h2>
+        <p>Nous livrons en moyenne un projet chaque 2 jours. Actuellement, nous avons livré :</p>
+        <div class="counter">
+            <h3 id="project-count">232</h3>
+            <p>projets réussis dans le monde entier</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    let projectCount = 232; // Nombre initial de projets
+    const counterElement = document.getElementById("project-count");
+    setInterval(() => {
+        projectCount++;
+        counterElement.textContent = projectCount;
+    }, 172800000); // Incrémente tous les 2 jours
+</script>
+
+<!-- Total Projets et Affichage des Détails -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Region-specific Projects -->
+    <div class="bg-white p-4 rounded-xl shadow-md cursor-pointer hover:shadow-lg transition duration-300" onclick="openPopUp('zambie')">
+        <h3 class="text-xl font-semibold text-black mb-2">Zambie (205 sites)</h3>
+        <p class="text-sm text-gray-500">Nos projets ont été réalisés dans plusieurs villes. Cliquez pour plus de détails.</p>
+    </div>
+    <div class="bg-white p-4 rounded-xl shadow-md cursor-pointer hover:shadow-lg transition duration-300" onclick="openPopUp('zimbabwe')">
+        <h3 class="text-xl font-semibold text-black mb-2">Zimbabwe (10 sites)</h3>
+        <p class="text-sm text-gray-500">Nos projets en Zimbabwe. Cliquez pour plus de détails.</p>
+    </div>
+    <div class="bg-white p-4 rounded-xl shadow-md cursor-pointer hover:shadow-lg transition duration-300" onclick="openPopUp('afrique-du-sud')">
+        <h3 class="text-xl font-semibold text-black mb-2">Afrique du Sud (7 sites)</h3>
+        <p class="text-sm text-gray-500">Découvrez nos réalisations en Afrique du Sud. Cliquez pour plus de détails.</p>
+    </div>
+    <div class="bg-white p-4 rounded-xl shadow-md cursor-pointer hover:shadow-lg transition duration-300" onclick="openPopUp('rdc')">
+        <h3 class="text-xl font-semibold text-black mb-2">RDC (17 sites)</h3>
+        <p class="text-sm text-gray-500">Sites réalisés dans plusieurs villes de la RDC. Cliquez pour plus de détails.</p>
+    </div>
+</div>
+
+<!-- Pop-Up Modal -->
+<div id="popUpModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex justify-center items-center">
+    <div class="bg-white p-6 rounded-xl w-11/12 md:w-2/3 lg:w-1/2 shadow-lg">
+        <span class="absolute top-3 right-3 text-lg font-bold cursor-pointer text-gray-600 hover:text-gray-800" onclick="closePopUp()">X</span>
+        <h3 id="popUpTitle" class="text-xl font-bold text-black mb-4"></h3>
+        <div id="popUpContent" class="text-gray-600 text-sm"></div>
+    </div>
+</div>
+
+<!-- Script JavaScript pour afficher le pop-up -->
+<script>
+    function openPopUp(region) {
+        const popUpTitle = document.getElementById('popUpTitle');
+        const popUpContent = document.getElementById('popUpContent');
+        const popUpModal = document.getElementById('popUpModal');
+        
+        popUpContent.innerHTML = ''; // Réinitialise le contenu
+        
+        switch (region) {
+            case 'zambie':
+                popUpTitle.textContent = 'Zambie - Détails des Projets';
+                popUpContent.innerHTML = `
+                    <ul>
+                        <li>Lusaka: 80 sites</li>
+                        <li>Kitwe: 40 sites</li>
+                        <li>Ndola: 30 sites</li>
+                        <li>Chingola: 25 sites</li>
+                        <li>Livingstone: 20 sites</li>
+                    </ul>`;
+                break;
+            case 'zimbabwe':
+                popUpTitle.textContent = 'Zimbabwe - Détails des Projets';
+                popUpContent.innerHTML = `
+                    <ul>
+                        <li>Harare: 6 sites</li>
+                        <li>Bulawayo: 2 sites</li>
+                    </ul>`;
+                break;
+            case 'afrique-du-sud':
+                popUpTitle.textContent = 'Afrique du Sud - Détails des Projets';
+                popUpContent.innerHTML = `
+                    <ul>
+                        <li>Johannesburg: 4 sites</li>
+                        <li>Cap Town: 3 sites</li>
+                    </ul>`;
+                break;
+            case 'rdc':
+                popUpTitle.textContent = 'RDC - Détails des Projets';
+                popUpContent.innerHTML = `
+                    <ul>
+                        <li>Lubumbashi: 7 sites</li>
+                        <li>Kolwezi: 5 sites</li>
+                        <li>Likasi: 5 sites</li>
+                    </ul>`;
+                break;
+        }
+        popUpModal.classList.remove('hidden');
+    }
+
+    function closePopUp() {
+        document.getElementById('popUpModal').classList.add('hidden');
+    }
+</script>
+
+<!-- Style CSS -->
+<style>
+    .cursor-pointer:hover {
+        transform: translateY(-3px);
+    }
+</style>
+
+<section class="charts-section">
+    <div class="container">
+        <h2 class="section-title" style="color: #1E90FF;">Graphiques et Visualisation des Données</h2>
+        <div class="chart-container">
+            <canvas id="chart" style="height: 300px;"></canvas>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Sélection du canvas pour le graphique
+    var ctx = document.getElementById('chart').getContext('2d');
+    
+    // Configuration du graphique
+    var myChart = new Chart(ctx, {
+        type: 'pie', // Type du graphique
+        data: {
+            labels: ['Zambie', 'Zimbabwe', 'Afrique du Sud', 'RDC'], // Labels des catégories
+            datasets: [{
+                label: '# de Projets',
+                data: [205, 10, 7, 17], // Données correspondantes
+                backgroundColor: [
+                    '#1E90FF', // Bleu
+                    '#FF6347', // Rouge
+                    '#32CD32', // Vert
+                    '#FFD700'  // Jaune
+                ],
+                borderColor: ['#FFFFFF'], // Couleur de bordure uniforme
+                borderWidth: 2 // Largeur des bordures
+            }]
+        },
+        options: {
+            responsive: true, // Le graphique est responsive
+            plugins: {
+                legend: {
+                    position: 'top', // Position de la légende
+                },
+                tooltip: {
+                    enabled: true, // Activer les infobulles
+                },
+            },
+        }
+    });
+</script>
+
+<style>
+    .charts-section {
+        padding: 60px 0;
+        text-align: center;
+        background-color: #f9f9f9;
+    }
+    .chart-container {
+        width: 70%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+</style>
+
+
+ <!-- Section Photos -->
+    <section id="photos" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-black mb-6">Galerie Photos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <img src="t3.jpeg" alt="Photo 1" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                <img src="t2.jpeg" alt="Photo 2" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                <img src="t1.jpeg" alt="Photo 3" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                <img src="t4.jpeg" alt="Photo 1" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                <img src="t5.jpeg" alt="Photo 2" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                <img src="t6.jpeg" alt="Photo 3" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                <img src="t7.jpeg" alt="Photo 1" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                <img src="t8.jpeg" alt="Photo 2" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                <img src="t9.jpeg" alt="Photo 3" class="w-full h-64 object-cover rounded-lg shadow-lg"><img src="t10.jpeg" alt="Photo 1" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                <img src="t11.jpeg" alt="Photo 2" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                <img src="t12.jpeg" alt="Photo 3" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                
+                
+            </div>
+        </div>
+    </section>
+
+<!-- Section Vidéo -->
+<section id="video" class="py-16 bg-gray-100">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-black mb-6">Vidéo en boucle</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="video-container">
+                <video autoplay loop muted class="w-full h-48 object-cover rounded-lg shadow-lg">
+                    <source src="4.mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la balise vidéo.
+                </video>
+            </div>
+            <div class="video-container">
+                <video autoplay loop muted class="w-full h-48 object-cover rounded-lg shadow-lg">
+                    <source src="3.mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la balise vidéo.
+                </video>
+            </div>
+            <div class="video-container">
+                <video autoplay loop muted class="w-full h-48 object-cover rounded-lg shadow-lg">
+                    <source src="2.mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la balise vidéo.
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="before-after-section">
+    <div class="container">
+        <h2 class="section-title" style="color: #1E90FF;">Comparaison Avant / Après</h2>
+        <div class="before-after-container">
+            <div class="before">
+                <img src="€.jpeg" alt="Avant" class="before-img">
+                <p class="description">Avant : Site non optimisé, peu d’interaction et difficile à naviguer.</p>
+            </div>
+            <div class="after">
+                <img src="€1.jpeg" alt="Après" class="after-img">
+                <p class="description">Après : Site moderne, responsive et optimisé pour une meilleure expérience utilisateur.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .before-after-section {
+        padding: 60px 0;
+    }
+    .before-after-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .before, .after {
+        width: 48%;
+    }
+    .before-img, .after-img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    .description {
+        text-align: center;
+        font-size: 1.1em;
+        margin-top: 10px;
+        color: #333;
+    }
+</style>
+
+<!-- Section Services Annexes -->
+<section id="services-annexes" class="py-16 bg-white">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-black mb-6">Nos tarifs</h2>
+        <p class="text-lg text-gray-600 mb-8">Profitez de nos packs avec des réductions exclusives pendant 3 mois!</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Service 1: Pack 1 -->
+            <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">Pack de 1000$</h3>
+                <p class="text-sm text-gray-600 mb-4">Profitez de 40% de réduction sur ce pack pour une durée limitée.</p>
+                <div class="text-red-500 font-bold text-lg line-through mb-2">$1000</div>
+                <div class="text-2xl font-bold text-green-600 mb-4">$600 <span class="text-sm text-gray-600">(-40%)</span></div>
+                <a href="https://www.votre-site.com/contact" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition duration-300">En savoir plus</a>
+            </div>
+
+            <!-- Service 2: Pack 2 -->
+            <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">Pack de 1800$</h3>
+                <p class="text-sm text-gray-600 mb-4">Bénéficiez d'une réduction de 40% sur ce pack pendant 3 mois.</p>
+                <div class="text-red-500 font-bold text-lg line-through mb-2">$1800</div>
+                <div class="text-2xl font-bold text-green-600 mb-4">$1080 <span class="text-sm text-gray-600">(-40%)</span></div>
+                <a href="https://www.votre-site.com/contact" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition duration-300">En savoir plus</a>
+            </div>
+
+            <!-- Service 3: Pack 3 -->
+            <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">Pack de 3000$</h3>
+                <p class="text-sm text-gray-600 mb-4">Obtenez 40% de réduction sur ce pack pendant 3 mois seulement.</p>
+                <div class="text-red-500 font-bold text-lg line-through mb-2">$3000</div>
+                <div class="text-2xl font-bold text-green-600 mb-4">$1800 <span class="text-sm text-gray-600">(-40%)</span></div>
+                <a href="https://www.votre-site.com/contact" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition duration-300">En savoir plus</a>
+            </div>
+
+            <!-- Service 4: Pack Contact -->
+            <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">Pack Personnalisé</h3>
+                <p class="text-sm text-gray-600 mb-4">Contactez-nous pour un pack sur mesure adapté à vos besoins.</p>
+                <div class="text-2xl font-bold text-gray-800 mb-4">Sur demande</div>
+                <a href="https://www.votre-site.com/contact" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition duration-300">Contactez-nous</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="certifications" class="py-16 bg-white">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-10">Certifications & Récompenses</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Certification 1 -->
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md border">
+                <h3 class="font-bold text-lg text-black mb-2">Certificat en Développement Web</h3>
+                <p class="text-sm text-gray-500">Obtenu en 2023</p>
+                <p class="text-sm text-gray-400">Institution : OpenClassrooms</p>
+            </div>
+            <!-- Certification 2 -->
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md border">
+                <h3 class="font-bold text-lg text-black mb-2">Prix du Meilleur Développeur</h3>
+                <p class="text-sm text-gray-500">Décerné en 2024</p>
+                <p class="text-sm text-gray-400">Événement : Web Summit, Lisbonne</p>
+            </div>
+            <!-- Certification 3 -->
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md border">
+                <h3 class="font-bold text-lg text-black mb-2">Certificat en UX/UI Design</h3>
+                <p class="text-sm text-gray-500">Obtenu en 2022</p>
+                <p class="text-sm text-gray-400">Institution : Coursera (Google UX Design)</p>
+            </div>
+            <!-- Certification 4 -->
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md border">
+                <h3 class="font-bold text-lg text-black mb-2">Prix d'Excellence en SEO</h3>
+                <p class="text-sm text-gray-500">Décerné en 2023</p>
+                <p class="text-sm text-gray-400">Événement : Congrès Digital Africa</p>
+            </div>
+            <!-- Certification 5 -->
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md border">
+                <h3 class="font-bold text-lg text-black mb-2">Certificat en Programmation Avancée</h3>
+                <p class="text-sm text-gray-500">Obtenu en 2021</p>
+                <p class="text-sm text-gray-400">Institution : Udemy</p>
+            </div>
+            <!-- Certification 6 -->
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md border">
+                <h3 class="font-bold text-lg text-black mb-2">Hackathon - 2ème Place</h3>
+                <p class="text-sm text-gray-500">Atteint en 2022</p>
+                <p class="text-sm text-gray-400">Événement : Hack for Change, Kinshasa</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Section Garanties -->
+<section id="garanties" class="py-16 bg-gray-100">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-semibold text-black mb-10">Nos Garanties</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-black mb-4">Satisfaction Garantie</h3>
+        <p class="text-lg text-gray-600">Nous nous engageons à ce que vous soyez 100% satisfait de votre site. Sinon, nous retravaillerons le projet jusqu'à votre entière satisfaction.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-black mb-4">Révisions Illimitées</h3>
+        <p class="text-lg text-gray-600">Nous offrons des révisions illimitées pendant 30 jours après la livraison pour nous assurer que tout est à votre goût.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-black mb-4">Maintenance Gratuite</h3>
+        <p class="text-lg text-gray-600">Bénéficiez de 6 mois de maintenance gratuite pour vous assurer que votre site fonctionne parfaitement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Client Satisfait -->
+<section class="client-satisfied py-5" style="background: linear-gradient(to bottom, #ffffff, #f8f9fa);">
+    <div class="container text-center">
+        <h2 class="text-primary">Nos Clients Sont Satisfaits</h2>
+        <p>Découvrez ce que nos clients disent de nos services.</p>
+        <div class="row mt-4">
+            <!-- Témoignage 1 -->
+            <div class="col-md-4 mb-4" data-aos="fade-up">
+                <div class="testimonial-card shadow p-4 rounded">
+                    <p class="lead">"Le site que nous avons reçu est incroyable ! Très réactif et adapté à nos besoins. Nous sommes plus que satisfaits."</p>
+                    <h5 class="text-dark">Marie Dupont</h5>
+                    <p>Directrice marketing</p>
+                </div>
+            </div>
+            <!-- Témoignage 2 -->
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-card shadow p-4 rounded">
+                    <p class="lead">"L'équipe a vraiment compris nos attentes et a livré un produit de qualité. Nous recommandons vivement leurs services."</p>
+                    <h5 class="text-dark">Jean-Claude M.</h5>
+                    <p>CEO - Entreprise XYZ</p>
+                </div>
+            </div>
+            <!-- Témoignage 3 -->
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="testimonial-card shadow p-4 rounded">
+                    <p class="lead">"Un service client impeccable et un site web qui reflète parfaitement notre image. Très satisfait du résultat !"</p>
+                    <h5 class="text-dark">Lucie Lemoine</h5>
+                    <p>Responsable de la communication</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AOS Animation Script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init(); // Initialisation des animations
+</script>
+
+<!-- Custom CSS for Client Testimonial Section -->
+<style>
+    .client-satisfied h2 {
+        font-size: 2.5rem;
+        color: #00aaff; /* Texte bleu */
+    }
+
+    .testimonial-card {
+        background: #ffffff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-card p {
+        font-size: 1rem;
+        color: #333;
+        font-style: italic;
+    }
+
+    .testimonial-card h5 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .testimonial-card p:last-child {
+        font-size: 0.9rem;
+        color: #777;
+    }
+</style>
+
+<section class="real-time-counter">
+    <div class="container">
+        <h2 class="section-title" style="color: #1E90FF;">Suivi en Temps Réel</h2>
+        <p class="counter-description">Nous livrons un projet en moyenne tous les 2 jours !</p>
+        <div class="counter">
+            <p id="real-time-projects" class="counter-number">232</p>
+            <p class="projects-text">Projets réalisés</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Initialisation des variables
+    let initialCount = 232; // Nombre initial de projets réalisés
+    let startDate = new Date("2025-01-12"); // Date de début fictive
+    const currentDate = new Date(); // Date actuelle
+    const dayInMs = 24 * 60 * 60 * 1000; // 24 heures en millisecondes
+
+    // Calcul du nombre de jours écoulés depuis la date de début
+    const daysElapsed = Math.floor((currentDate - startDate) / dayInMs);
+
+    // Calcul du nouveau nombre de projets
+    const updatedCount = initialCount + daysElapsed;
+
+    // Mise à jour du compteur dans le DOM
+    document.getElementById("real-time-projects").innerText = updatedCount;
+
+    // Ajout d'un projet tous les 24 heures
+    setInterval(function () {
+        const newCount = parseInt(document.getElementById("real-time-projects").innerText) + 1;
+        document.getElementById("real-time-projects").innerText = newCount;
+    }, dayInMs);
+</script>
+
+<style>
+    .real-time-counter {
+        padding: 60px 0;
+        text-align: center;
+    }
+    .counter-description {
+        font-size: 1.2em;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .counter {
+        font-size: 2em;
+        font-weight: bold;
+        color: #1E90FF;
+    }
+    .projects-text {
+        font-size: 1.2em;
+        color: #333;
+    }
+</style>
+
+
+<section class="section-faq py-5" id="faq">
+    <div class="container">
+        <h2 class="text-center text-blue mb-5">Foire Aux Questions (FAQ)</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <!-- Question 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                                Qu'est-ce que le SEO et pourquoi est-il important ?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Le SEO (Search Engine Optimization) est l'ensemble des techniques utilisées pour optimiser un site web afin d'améliorer sa visibilité dans les résultats des moteurs de recherche. Un bon SEO permet d'attirer plus de trafic organique et de maximiser l'engagement des utilisateurs, ce qui peut considérablement augmenter la portée de votre entreprise en ligne.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                Comment puis-je améliorer le temps de chargement de mon site web ?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Pour améliorer le temps de chargement de votre site, il est essentiel de compresser les images, de minimiser les fichiers CSS et JavaScript, et d'utiliser un service de mise en cache. Vous pouvez également opter pour un hébergement rapide et bien optimisé pour les performances.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                Qu'est-ce qu'un backlink et pourquoi est-il important pour le SEO ?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Un backlink est un lien provenant d'un autre site qui pointe vers votre site. Les backlinks sont importants pour le SEO car ils sont un indicateur de la crédibilité et de l'autorité de votre site aux yeux des moteurs de recherche. Plus vous obtenez de backlinks de qualité, plus votre site sera considéré comme pertinent.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                                Quelle est l'importance du design mobile-friendly ?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Le design mobile-friendly est crucial car de plus en plus de personnes naviguent sur internet via des appareils mobiles. Google favorise également les sites qui sont optimisés pour les mobiles dans ses résultats de recherche, ce qui peut améliorer votre classement SEO et l'expérience utilisateur.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                                Comment puis-je suivre la performance de mon site web ?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Vous pouvez utiliser des outils comme Google Analytics ou Google Search Console pour suivre la performance de votre site web. Ces outils fournissent des informations détaillées sur le trafic, les conversions, le temps de chargement, et d'autres indicateurs clés de performance (KPI).
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 6 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseSix" aria-expanded="false" aria-controls="faqCollapseSix">
+                                Qu'est-ce qu'un site responsive ?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseSix" class="accordion-collapse collapse" aria-labelledby="faqHeadingSix" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Un site responsive est un site qui s'adapte à différentes tailles d'écran et appareils (smartphones, tablettes, ordinateurs de bureau). Cela permet une expérience utilisateur optimale sur tous les appareils et est également pris en compte par Google pour le classement SEO.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 7 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseSeven" aria-expanded="false" aria-controls="faqCollapseSeven">
+                                Pourquoi choisir un CMS pour créer un site web ?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseSeven" class="accordion-collapse collapse" aria-labelledby="faqHeadingSeven" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Un CMS (Content Management System) comme WordPress ou Joomla permet de créer et de gérer facilement un site web sans avoir besoin de compétences techniques approfondies. Il offre également des fonctionnalités SEO prêtes à l'emploi pour optimiser votre site.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 8 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseEight" aria-expanded="false" aria-controls="faqCollapseEight">
+                                Combien coûte la création d'un site web ?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseEight" class="accordion-collapse collapse" aria-labelledby="faqHeadingEight" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Le coût dépend du type de site que vous souhaitez créer (site vitrine, e-commerce, etc.), ainsi que des fonctionnalités et de la complexité du projet. Il peut varier de quelques centaines à plusieurs milliers d'euros.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 9 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeadingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseNine" aria-expanded="false" aria-controls="faqCollapseNine">
+                                Que puis-je faire pour améliorer mon référencement local ?
+                            </button>
+                        </h2>
+                        <div id="faqCollapseNine" class="accordion-collapse collapse" aria-labelledby="faqHeadingNine" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Pour améliorer votre référencement local, il est important d'optimiser votre profil Google My Business, d'obtenir des avis clients et de vous inscrire dans des annuaires locaux. De plus, il est essentiel d'inclure des mots-clés locaux dans vos contenus et titres.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+  
+<section id="blog" class="py-16 bg-gray-50">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Blog</h2>
+        <p class="text-lg text-gray-600 mb-8">Découvrez nos derniers articles sur le SEO, les tendances web et l'optimisation de votre présence en ligne.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
+                <h3 class="font-bold text-xl mb-2 text-blue-600">comment créer un site web interactif  ?</h3>
+                <p class="text-sm text-gray-400 mb-4">Apprenez les bases du SEO pour améliorer la visibilité de votre site web. Un guide pour les débutants.</p>
+                <a href="seo1.html" class="inline-block mt-4 text-blue-400 hover:text-blue-300">Lire plus</a>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
+                <h3 class="font-bold text-xl mb-2 text-blue-600">tendance du web en 2025</h3>
+                <p class="text-sm text-gray-400 mb-4">Évitez ces erreurs fréquentes qui peuvent nuire à votre classement sur les moteurs de recherche.</p>
+                <a href="seo2.html" class="inline-block mt-4 text-blue-400 hover:text-blue-300">Lire plus</a>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
+                <h3 class="font-bold text-xl mb-2 text-blue-600">meilleur pratique seo en 2025</h3>
+                <p class="text-sm text-gray-400 mb-4">Optimisez votre entreprise pour les recherches locales et attirez plus de clients de votre région.</p>
+                <a href="seo3.html" class="inline-block mt-4 text-blue-400 hover:text-blue-300">Lire plus</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="bg-black text-white py-8">
+    <div class="container mx-auto text-center">
+        <div class="mb-6">
+            <h3 class="text-xl font-semibold mb-4">Suivez-nous</h3>
+            <!-- Liens vers les réseaux sociaux -->
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.linkedin.com" target="_blank" class="text-white hover:text-blue-500 transition duration-300">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="text-white hover:text-pink-500 transition duration-300">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" class="text-white hover:text-blue-400 transition duration-300">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" class="text-white hover:text-blue-600 transition duration-300">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" class="text-white hover:text-red-500 transition duration-300">
+                    <i class="fab fa-youtube fa-2x"></i>
+                </a>
+                <a href="https://www.pinterest.com" target="_blank" class="text-white hover:text-red-600 transition duration-300">
+                    <i class="fab fa-pinterest fa-2x"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Mentions légales -->
+        <div class="text-sm mt-6">
+            <p>&copy; 2025 Votre Entreprise. Tous droits réservés. <a href="/mentions-legales" class="text-white hover:text-gray-400">Mentions légales</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts nécessaires pour les icônes sociales (FontAwesome) -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<!-- Styles CSS -->
+<style>
+    .btn-custom {
+        background-color: #1E90FF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        background-color: #1C86EE;
+    }
+</style>
+
+<!-- Responsivité avec Tailwind CSS -->
+<style>
+    @media (max-width: 768px) {
+        .footer .container {
+            padding: 0 1rem;
+        }
+
+        .footer .text-sm {
+            font-size: 0.9rem;
+        }
+    }
+</style>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informations sur l'Hébergement - Portfolio Interactif</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom CSS */
+        body {
+            background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+        }
+
+        .navbar {
+            background-color: white;
+        }
+
+        .navbar-nav .nav-link {
+            color: #007bff !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #0056b3 !important;
+        }
+
+        .btn-black {
+            background-color: black;
+            color: white;
+        }
+
+        .hero-section-hebergement {
+            background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+            padding: 80px 0;
+        }
+
+        .section-hebergement {
+            padding: 50px 0;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .text-blue {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand text-blue" href="index.html">Portfolio 3D</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                    
+                     <li class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section-hebergement text-center">
+        <div class="container">
+            <h1 class="text-blue">Informations sur l'Hébergement</h1>
+            <p class="text-dark">Découvrez nos solutions d'hébergement pour garantir la performance et la sécurité de votre site.</p>
+        </div>
+    </header>
+
+    <!-- Hébergement Section -->
+    <section class="section-hebergement">
+        <div class="container">
+            <div class="row">
+                <!-- Hébergement 1 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <div class="service-card">
+                        <h3 class="text-blue">Hébergement partagé</h3>
+                        <p>Une solution économique pour les sites à faible trafic. Idéal pour les petits projets ou blogs.</p>
+                        <a href="contact.html" class="btn btn-black">En savoir plus</a>
+                    </div>
+                </div>
+                <!-- Hébergement 2 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <h3 class="text-blue">Hébergement VPS</h3>
+                        <p>Plus de ressources et de flexibilité. Convient pour les projets à plus grand trafic et nécessitant plus de contrôle.</p>
+                        <a href="contact.html" class="btn btn-black">En savoir plus</a>
+                    </div>
+                </div>
+                <!-- Hébergement 3 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <h3 class="text-blue">Hébergement dédié</h3>
+                        <p>Des serveurs dédiés pour une performance optimale. Idéal pour les sites à fort trafic ou les entreprises.</p>
+                        <a href="contact.html" class="btn btn-black">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hébergement Avancé -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="service-card">
+                        <h3 class="text-blue">Solutions d'Hébergement Avancées</h3>
+                        <p>Nous proposons également des services d'hébergement cloud, avec des performances de pointe et une sécurité renforcée.</p>
+                        <a href="contact.html" class="btn btn-black">Contactez-nous pour plus d'infos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-white bg-black py-3">
+        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

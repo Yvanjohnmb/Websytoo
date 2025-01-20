@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intégration d'Outils & Plugins - Portfolio Interactif</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom CSS */
+        body {
+            background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+        }
+
+        .navbar {
+            background-color: white;
+        }
+
+        .navbar-nav .nav-link {
+            color: #007bff !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #0056b3 !important;
+        }
+
+        .btn-black {
+            background-color: black;
+            color: white;
+        }
+
+        .hero-section-tools {
+            background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+            padding: 80px 0;
+        }
+
+        .section-tools {
+            padding: 50px 0;
+        }
+
+        .tool-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .text-blue {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand text-blue" href="index.html">Portfolio 3D</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                    
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section-tools text-center">
+        <div class="container">
+            <h1 class="text-blue">Intégration d'Outils & Plugins</h1>
+            <p class="text-dark">Optimisez votre site avec des outils et plugins puissants pour une performance accrue et des fonctionnalités améliorées.</p>
+        </div>
+    </header>
+
+    <!-- Outils & Plugins Section -->
+    <section class="section-tools">
+        <div class="container">
+            <div class="row">
+                <!-- Outil 1 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <div class="tool-card">
+                        <h3 class="text-blue">Outil SEO</h3>
+                        <p>Améliorez le référencement de votre site avec des outils SEO professionnels, permettant d'optimiser le contenu, les métadonnées et la vitesse de chargement.</p>
+                        <a href="contact.html" class="btn btn-black">En savoir plus</a>
+                    </div>
+                </div>
+                <!-- Outil 2 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tool-card">
+                        <h3 class="text-blue">Outil Analytics</h3>
+                        <p>Suivez les performances de votre site en temps réel avec des outils d'analyse. Obtenez des informations détaillées sur les visiteurs, les pages vues, et bien plus.</p>
+                        <a href="contact.html" class="btn btn-black">En savoir plus</a>
+                    </div>
+                </div>
+                <!-- Outil 3 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tool-card">
+                        <h3 class="text-blue">Plugin de Sécurité</h3>
+                        <p>Protégez votre site contre les menaces en ligne grâce à des plugins de sécurité robustes, incluant des pare-feux et des options de sauvegarde automatiques.</p>
+                        <a href="contact.html" class="btn btn-black">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outil 4 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tool-card">
+                        <h3 class="text-blue">Plugin de Performance</h3>
+                        <p>Améliorez la vitesse de votre site avec des plugins qui optimisent les images, la mise en cache et d'autres aspects techniques.</p>
+                        <a href="contact.html" class="btn btn-black">Contactez-nous pour plus d'infos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-white bg-black py-3">
+        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

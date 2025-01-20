@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Photographe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ajout d'un dégradé de fond blanc */
+        body {
+            background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+        }
+
+        .hero-section {
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-section h1, .hero-section p {
+            color: #007bff; /* Bleu pour le texte */
+        }
+
+        .btn-black {
+            background-color: black;
+            color: #ffffff;
+            border: none;
+            padding: 12px 30px;
+        }
+
+        .btn-black:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .section-title {
+            color: #007bff;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        /* Effets de reverse zoom scroll 3D */
+        .photo-grid img {
+            transition: transform 0.3s ease, opacity 0.5s ease;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+
+        .service-card, .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h5, .testimonial-card h5 {
+            color: #007bff;
+        }
+
+        .testimonial-section {
+            background: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        .footer {
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+            text-align: center;
+            padding: 30px 0;
+            color: #007bff;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Portfolio Photographe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Nos Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Témoignages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <h1>Bienvenue sur mon Portfolio</h1>
+        <p>Photographe professionnel spécialisé dans les portraits, les mariages, et les événements.</p>
+        <a href="#contact" class="btn btn-black">Contactez-moi</a>
+    </header>
+
+    <!-- Nos Services -->
+    <section id="services" class="py-5 text-center">
+        <h2 class="section-title">Nos Services</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <h5>Portraits</h5>
+                        <p>Des portraits personnalisés, capturant l’essence de chaque individu.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <h5>Événements</h5>
+                        <p>Des souvenirs immortalisés lors de vos événements spéciaux.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <h5>Mariages</h5>
+                        <p>Des photos intemporelles pour capturer chaque moment magique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="about" class="py-5 text-center">
+        <h2 class="section-title">À propos de Moi</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <img src="portrait.jpg" class="img-fluid rounded shadow" alt="Photographe">
+                </div>
+                <div class="col-md-6 mb-4">
+                    <p>
+                        Je suis passionné par la photographie depuis plusieurs années. Mon but est de capturer des moments authentiques et
+                        émouvants à travers mon objectif. Que ce soit pour un mariage, un événement ou un portrait, je m’engage à offrir
+                        des photos de qualité professionnelle.
+                    </p>
+                    <a href="#contact" class="btn btn-black">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie -->
+    <section id="gallery" class="py-5 text-center">
+        <h2 class="section-title">Galerie</h2>
+        <div class="container">
+            <div class="row photo-grid">
+                <div class="col-md-4 mb-4">
+                    <img src="photo1.jpg" class="img-fluid rounded shadow" alt="Photo 1">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="photo2.jpg" class="img-fluid rounded shadow" alt="Photo 2">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="photo3.jpg" class="img-fluid rounded shadow" alt="Photo 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section id="testimonials" class="testimonial-section">
+        <h2 class="section-title text-center">Témoignages</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <h5>Client 1</h5>
+                        <p>"Les photos de notre mariage sont magnifiques. Vous avez capturé chaque instant avec une telle émotion."</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <h5>Client 2</h5>
+                        <p>"Un professionnel exceptionnel, toujours à l’écoute et les résultats sont au-delà de nos attentes."</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <h5>Client 3</h5>
+                        <p>"Les portraits sont parfaits, ils reflètent vraiment qui je suis. Merci pour ce travail incroyable!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 text-center">
+        <h2 class="section-title">Contact</h2>
+        <p>Vous souhaitez en savoir plus ou réserver une séance ? N'hésitez pas à me contacter !</p>
+        <a href="mailto:contact@photographe.com" class="btn btn-black">Envoyer un Email</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Portfolio Photographe. Tous droits réservés.</p>
+        <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

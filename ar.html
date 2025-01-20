@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisanat - Services de Qualité</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Fond blanc avec écriture noire et jaune */
+        body {
+            background-color: #fff;
+            color: #000;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #000;
+        }
+
+        .navbar .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar .navbar-nav .nav-link:hover {
+            color: #f1c40f;
+        }
+
+        .hero-section {
+            background: url('artisan-hero.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+        }
+
+        .btn-yellow {
+            background-color: #f1c40f;
+            color: black;
+            border: 1px solid #f1c40f;
+            padding: 12px 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .btn-yellow:hover {
+            background-color: #f39c12;
+            color: white;
+        }
+
+        .section-title {
+            color: #f1c40f;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        /* Reverse Zoom Scroll 3D */
+        .photo-grid img {
+            transition: transform 0.3s ease, opacity 0.5s ease;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+
+        .service-card {
+            background-color: #000;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonial-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+
+        .testimonial-card {
+            background-color: #f1c40f;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Artisanat</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Nos Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Témoignages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Artisanat de Qualité</h1>
+        <p>Des créations sur-mesure pour tous vos besoins artisanaux.</p>
+        <a href="#contact" class="btn btn-yellow">Contactez-nous</a>
+    </section>
+
+    <!-- À propos -->
+    <section id="about" class="py-5">
+        <h2 class="section-title">À propos de nous</h2>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Nous sommes un artisan passionné par la création de pièces uniques, fabriquées à la main avec soin et précision. Chaque projet est un défi que nous relevons avec enthousiasme pour apporter des solutions innovantes et personnalisées à nos clients.</p>
+                    <a href="#contact" class="btn btn-yellow">En savoir plus</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="artisan-about.jpg" alt="Artisanat" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie -->
+    <section id="gallery" class="py-5">
+        <h2 class="section-title">Galerie</h2>
+        <div class="container">
+            <div class="row photo-grid">
+                <div class="col-md-4 mb-4">
+                    <img src="artisan-photo1.jpg" alt="Artisanat 1" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="artisan-photo2.jpg" alt="Artisanat 2" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="artisan-photo3.jpg" alt="Artisanat 3" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nos Services -->
+    <section id="services" class="py-5">
+        <h2 class="section-title">Nos Services</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <h5>Création Personnalisée</h5>
+                        <p>Des œuvres sur-mesure, adaptées à vos besoins spécifiques.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <h5>Réparation et Restauration</h5>
+                        <p>Nous réparons et restaurons vos objets anciens pour leur redonner une nouvelle vie.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <h5>Consultation Design</h5>
+                        <p>Des conseils experts pour vos projets artisanaux et de décoration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section id="testimonials" class="testimonial-section">
+        <h2 class="section-title">Témoignages</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <p>"Un artisan exceptionnel! Chaque pièce est unique et de qualité irréprochable."</p>
+                        <h5>Marie L.</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <p>"Nous avons fait appel à ce professionnel pour la restauration d'un meuble ancien et le résultat est magnifique!"</p>
+                        <h5>Jean P.</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <p>"Super service! Très satisfait de mon meuble sur-mesure, je recommande vivement."</p>
+                        <h5>Alice D.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 text-center">
+        <h2 class="section-title">Contactez-nous</h2>
+        <p>Vous avez un projet en tête? Contactez-nous pour obtenir un devis personnalisé.</p>
+        <a href="mailto:contact@artisanat.com" class="btn btn-yellow">Envoyer un Email</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Artisanat - Tous droits réservés.</p>
+        <p>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        </p>
+        <p><a href="mailto:contact@artisanat.com">contact@artisanat.com</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

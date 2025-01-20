@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos maker</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #121212;
+            color: #fff;
+            overflow-x: hidden;
+            perspective: 1500px; /* Perspective globale pour effet 3D */
+        }
+
+        h1, h2 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1a1a1a, #000);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            z-index: 2;
+            position: relative;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 60%);
+            animation: spin 20s linear infinite;
+            z-index: 1;
+        }
+
+        /* Gallery Section */
+        section#gallery {
+            padding: 4rem 2rem;
+            background: #121212;
+        }
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding-top: 2rem;
+        }
+
+        .photo-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.8s ease-out;
+            transform-style: preserve-3d;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: rotateY(0);
+            backface-visibility: hidden;
+        }
+
+        .photo-card:hover {
+            transform: rotateY(15deg) translateZ(50px);
+        }
+
+        .photo-card:hover img {
+            transform: scale(1.2);
+            transition: transform 0.6s ease;
+        }
+
+        /* About Section */
+        section#about {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #1a1a1a, #121212);
+            text-align: center;
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.2rem;
+            color: #bbb;
+        }
+
+        /* Contact Section */
+        section#contact {
+            padding: 4rem 2rem;
+            background: #181818;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            color: #000;
+            background: #ffa500;
+            border: none;
+            border-radius: 10px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #ff9000;
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #000;
+            color: #fff;
+            font-size: 0.8rem;
+        }
+
+        /* Keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Photos maker</h1>
+    </header>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Galerie</h2>
+        <div class="photo-grid">
+            <div class="photo-card">
+                <img src="photo1.jpg" alt="Photo 1">
+            </div>
+            <div class="photo-card">
+                <img src="photo2.jpg" alt="Photo 2">
+            </div>
+            <div class="photo-card">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo-card">
+                <img src="photo4.jpg" alt="Photo 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>Je suis un photographe passionné par la capture de moments uniques et mémorables. Mon portfolio reflète mon amour pour la lumière, les textures et les émotions. Explorez mes œuvres et découvrez ma vision du monde.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <a href="mailto:contact@votresite.com" class="btn">Envoyez un message</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mon Portfolio . Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon de Coiffure</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Fond noir et blanc avec des grilles photos */
+        body {
+            background-color: #000000;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #222;
+        }
+
+        .navbar .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+
+        .hero-section {
+            background: url('salon-hero.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+        }
+
+        .btn-black {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            padding: 12px 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .btn-black:hover {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        .section-title {
+            color: #007bff;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        /* Reverse Zoom Scroll 3D */
+        .photo-grid img {
+            transition: transform 0.3s ease, opacity 0.5s ease;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+
+        .service-card {
+            background-color: #222;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonial-section {
+            background-color: #1c1c1c;
+            padding: 50px 0;
+        }
+
+        .testimonial-card {
+            background-color: #333;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Salon de Coiffure</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Nos Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Témoignages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Bienvenue au Salon de Coiffure</h1>
+        <p>Découvrez l'élégance et la beauté à travers notre expertise en coiffure.</p>
+        <a href="#contact" class="btn btn-black">Réservez maintenant</a>
+    </section>
+
+    <!-- À propos -->
+    <section id="about" class="py-5">
+        <h2 class="section-title">À propos de nous</h2>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Notre salon est un lieu où beauté et style se rencontrent pour créer des coiffures parfaites, adaptées à chaque client. Nos coiffeurs experts utilisent les meilleures techniques pour vous offrir des résultats exceptionnels.</p>
+                    <a href="#contact" class="btn btn-black">En savoir plus</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="salon-interieur.jpg" alt="Salon" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie -->
+    <section id="gallery" class="py-5">
+        <h2 class="section-title">Galerie</h2>
+        <div class="container">
+            <div class="row photo-grid">
+                <div class="col-md-4 mb-4">
+                    <img src="coiffure1.jpg" alt="Coiffure 1" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="coiffure2.jpg" alt="Coiffure 2" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="coiffure3.jpg" alt="Coiffure 3" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nos Services -->
+    <section id="services" class="py-5">
+        <h2 class="section-title">Nos Services</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <h5>Coiffure Femme</h5>
+                        <p>Des coupes et coiffures tendances pour sublimer votre style.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <h5>Coiffure Homme</h5>
+                        <p>Des coupes modernes et élégantes adaptées à chaque personnalité.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <h5>Coloration</h5>
+                        <p>Des colorations personnalisées pour révéler votre éclat naturel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section id="testimonials" class="testimonial-section">
+        <h2 class="section-title">Témoignages</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <p>"Le meilleur salon où j'ai été ! Les coiffeurs sont très professionnels et m'ont donné exactement ce que je voulais."</p>
+                        <h5>Julie D.</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <p>"Ambiance agréable et travail de qualité. Je recommande vivement ce salon !"</p>
+                        <h5>Marc T.</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <p>"Je suis toujours satisfait du service. Des coiffeurs compétents et très accueillants."</p>
+                        <h5>Lucie M.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 text-center">
+        <h2 class="section-title">Contactez-nous</h2>
+        <p>Réservez votre rendez-vous dès maintenant en nous envoyant un email !</p>
+        <a href="mailto:contact@saloncoiffure.com" class="btn btn-black">Envoyer un Email</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Salon de Coiffure. Tous droits réservés.</p>
+        <p>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        </p>
+        <p><a href="mailto:contact@saloncoiffure.com">contact@saloncoiffure.com</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

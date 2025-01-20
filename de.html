@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Décorateur d'Intérieur et d'Extérieur</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ajout d'un dégradé de fond blanc */
+        body {
+            background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+        }
+
+        .hero-section {
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-section h1, .hero-section p {
+            color: #007bff; /* Bleu pour le texte */
+        }
+
+        .btn-black {
+            background-color: black;
+            color: #ffffff;
+            border: none;
+            padding: 12px 30px;
+        }
+
+        .btn-black:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .section-title {
+            color: #007bff;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        /* Effets de reverse zoom scroll 3D */
+        .photo-grid img {
+            transition: transform 0.3s ease, opacity 0.5s ease;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+
+        .service-card, .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h5, .testimonial-card h5 {
+            color: #007bff;
+        }
+
+        .testimonial-section {
+            background: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        .footer {
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+            text-align: center;
+            padding: 30px 0;
+            color: #007bff;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Portfolio Décorateur</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Nos Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projets Réalisés</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <h1>Bienvenue sur mon Portfolio</h1>
+        <p>Spécialiste en décoration d'intérieur et d'extérieur pour un design moderne et fonctionnel.</p>
+        <a href="#contact" class="btn btn-black">Contactez-moi</a>
+    </header>
+
+    <!-- Nos Services -->
+    <section id="services" class="py-5 text-center">
+        <h2 class="section-title">Nos Services</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <h5>Décoration d'Intérieur</h5>
+                        <p>Création d'espaces élégants et fonctionnels pour votre maison ou bureau.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <h5>Aménagement Extérieur</h5>
+                        <p>Conception de jardins et espaces extérieurs harmonieux pour un cadre de vie optimal.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <h5>Rénovation</h5>
+                        <p>Redonnez vie à vos espaces avec des projets de rénovation adaptés à vos besoins.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="about" class="py-5 text-center">
+        <h2 class="section-title">À propos de Moi</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <img src="portrait.jpg" class="img-fluid rounded shadow" alt="Décorateur">
+                </div>
+                <div class="col-md-6 mb-4">
+                    <p>
+                        Je suis un décorateur d'intérieur et d'extérieur passionné par la création d’espaces fonctionnels et esthétiques.
+                        Avec plusieurs années d'expérience dans le domaine, je m'engage à transformer chaque projet en un espace unique qui répond aux besoins et aux aspirations de mes clients.
+                    </p>
+                    <a href="#contact" class="btn btn-black">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie -->
+    <section id="gallery" class="py-5 text-center">
+        <h2 class="section-title">Galerie</h2>
+        <div class="container">
+            <div class="row photo-grid">
+                <div class="col-md-4 mb-4">
+                    <img src="interior1.jpg" class="img-fluid rounded shadow" alt="Décoration Intérieure 1">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="interior2.jpg" class="img-fluid rounded shadow" alt="Décoration Intérieure 2">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="exterior1.jpg" class="img-fluid rounded shadow" alt="Aménagement Extérieur 1">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Réalisés -->
+    <section id="projects" class="py-5 text-center">
+        <h2 class="section-title">Projets Réalisés</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <img src="project1.jpg" class="img-fluid rounded shadow" alt="Projet 1">
+                    <p>Aménagement intérieur d'une maison familiale moderne et chaleureuse.</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <img src="project2.jpg" class="img-fluid rounded shadow" alt="Projet 2">
+                    <p>Transformation d'un jardin extérieur en un espace de détente élégant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 text-center">
+        <h2 class="section-title">Contact</h2>
+        <p>Envie de discuter de votre projet ? N'hésitez pas à me contacter pour plus d'informations.</p>
+        <a href="mailto:contact@decorateur.com" class="btn btn-black">Envoyer un Email</a>
+    </section>
+    <!-- Footer Section -->
+<footer class="footer text-center py-5" style="background: linear-gradient(180deg, #ffffff, #f4f4f4);">
+    <div class="container">
+        <p class="text-blue-500 font-semibold text-lg">
+            &copy; 2025 Agence Web - Tous droits réservés
+        </p>
+        <p class="text-blue-500 text-sm">
+            Suivez-nous sur :
+            <a href="https://www.instagram.com" class="text-blue-500 hover:text-blue-700 mx-2">Instagram</a> |
+            <a href="https://www.linkedin.com" class="text-blue-500 hover:text-blue-700 mx-2">LinkedIn</a> |
+            <a href="https://www.facebook.com" class="text-blue-500 hover:text-blue-700 mx-2">Facebook</a>
+        </p>
+        <p class="text-blue-500 text-sm mt-3">
+            Contactez-nous : <a href="mailto:contact@votreentreprise.com" class="text-blue-500 hover:text-blue-700">contact@votreentreprise.com</a>
+        </p>
+    </div>
+</footer>
+
+<!-- CSS pour le footer -->
+<style>
+    .footer {
+        background: linear-gradient(180deg, #ffffff, #f4f4f4);
+        color: #007bff;
+    }
+
+    .footer a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .footer a:hover {
+        color: #0056b3;
+    }
+
+    .footer p {
+        margin-bottom: 0;
+    }
+
+    .footer .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footer .text-blue-500 {
+        color: #007bff;
+    }
+
+    .footer .hover\:text-blue-700:hover {
+        color: #0056b3;
+    }
+
+    /* Responsive design pour mobile */
+    @media (max-width: 768px) {
+        .footer p {
+            font-size: 14px;
+        }
+        .footer a {
+            font-size: 14px;
+        }
+    }
+</style>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Portfolio Décorateur. Tous droits réservés.</p>
+        <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
